@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome Example</title>
+
+	 <link rel="stylesheet" href="Styles/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div id="Content">
+		<div id="Problem"><div class="A">Problem</div><p class="B">Bubble Sort</p></div>
+		<div id="Discription"><div class="A">Discription</div><p class="B">Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order</p></div>
+		<div id="Program">
+			<div id="C">
+				<div class="A">C Program</div>
+				<pre class="B">
+					// C program for implementation of Bubble sort
+					#include <stdio.h>
+					void swap(int *xp, int *yp)
+					{
+					int temp = *xp;
+					*xp = *yp;
+					*yp = temp;
+					}
+					// A function to implement bubble sort
+					void bubbleSort(int arr[], int n)
+					{
+					int i, j;
+					for (i = 0; i < n-1; i++)      
+
+					// Last i elements are already in place   
+					for (j = 0; j < n-i-1; j++) 
+					if (arr[j] > arr[j+1])
+					swap(&arr[j], &arr[j+1]);
+					}
+
+					/* Function to print an array */
+					void printArray(int arr[], int size)
+					{
+					int i;
+					for (i=0; i < size; i++)
+					printf("%d ", arr[i]);
+					printf("n");
+					}
+					int main()
+					{
+					int arr[] = {64, 34, 25, 12, 22, 11, 90};
+					int n = sizeof(arr)/sizeof(arr[0]);
+					bubbleSort(arr, n);
+					printf("Sorted array: \n");
+					printArray(arr, n);
+					return 0;
+					}
+
+				</pre>
+			</div>
+			<div id="Java">
+
+				<div class="A">Java Program</div>
+				<pre class="B">
+					// Java program for implementation of Bubble Sort
+					class BubbleSort
+					{
+					void bubbleSort(int arr[])
+					{
+					int n = arr.length;
+					for (int i = 0; i < n-1; i++)
+					for (int j = 0; j < n-i-1; j++)
+					if (arr[j] > arr[j+1])
+					{
+					// swap temp and arr[i]
+					int temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+					}
+					}
+					void printArray(int arr[])
+					{
+					int n = arr.length;
+					for (int i=0; i< n;++i)
+					System.out.print(arr[i] + " ");
+					System.out.println();
+					}
+					public static void main(String args[])
+					{
+					BubbleSort ob = new BubbleSort();
+					int arr[] = {64, 34, 25, 12, 22, 11, 90};
+					ob.bubbleSort(arr);
+					System.out.println("Sorted array");
+					ob.printArray(arr);
+					}
+					}
+				</pre>
+			</div>
+		</div>
+			<div id="Output">
+				<div id="COutput">
+					<div class="A">C Program Output</div>
+				<p class="B" >Sorted array:11 12 22 25 34 64 90</p>
+				</div>
+				<div id="JavaOutput">
+					<div class="A">Java Program Output</div>
+			<p class="B">Sorted array:11 12 22 25 34 64 90</p> 
+				</div>
+		    </div>
+       </div>
+
+</div>
+
+</body>
+</html>

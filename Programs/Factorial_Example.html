@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome Example</title>
+
+	 <link rel="stylesheet" href="Styles/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div id="Content">
+		<div id="Problem"><div class="A">Problem</div><p class="B">Factorial of a Number</p></div>
+		<div id="Discription"><div class="A">Discription</div><p class="B">In this program, you'll learn to find the factorial of a number using for and while loop in C/Java</p></div>
+		<div id="Program">
+			<div id="C">
+				<div class="A">C Program</div>
+				<pre class="B">
+				#include <stdio.h>
+				int main()
+				{
+				int n, i;
+				unsigned long long factorial = 1;
+
+				printf("Enter an integer: ");
+				scanf("%d",&n);
+
+				// show error if the user enters a negative integer
+				if (n < 0)
+				printf("Error! Factorial of a negative number doesn't exist.");
+
+				else
+				{
+				for(i=1; i<=n; ++i)
+				{
+				factorial *= i;              // factorial = factorial*i;
+				}
+				printf("Factorial of %d = %llu", n, factorial);
+				}
+
+				return 0;
+				}
+				</pre>
+			</div>
+			<div id="Java">
+
+				<div class="A">Java Program</div>
+				<pre class="B">
+				public class Factorial {
+
+				public static void main(String[] args) {
+
+				int num = 10;
+				long factorial = 1;
+				for(int i = 1; i <= num; ++i)
+				{
+				// factorial = factorial * i;
+				factorial *= i;
+				}
+				System.out.printf("Factorial of %d = %d", num, factorial);
+				}
+				}
+				</pre>
+			</div>
+		</div>
+			<div id="Output">
+				<div id="COutput">
+					<div class="A">C Program Output</div>
+				<p class="B">Enter an integer: 10
+Factorial of 10 = 3628800</p>
+				</div>
+				<div id="JavaOutput">
+					<div class="A">Java Program Output</div>
+<p class="B">Factorial of 10 = 3628800</p>
+				</div>
+		    </div>
+       </div>
+
+</div>
+
+</body>
+</html>

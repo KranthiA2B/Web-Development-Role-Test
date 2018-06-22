@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fibonacci Series</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	 <link rel="stylesheet" href="Styles/styles.css">
+	</head>
+<body>
+<div id="Content">
+		<div id="Problem"><div class="A">Problem</div><p class="B">Program to Display Fibonacci Sequence</p></div>
+		<div id="Discription"><div class="A">Discritpion</div><p class="B">display the Fibonacci sequence of first n numbers (entered by the user) using loop. Also in different example, you learn to generate the Fibonacci sequence up to a certain number.
+</p></div>
+		<div id="Program">
+			<div id="C">
+				<div class="A">C Program</div>
+				<pre class="B">
+				#include <stdio.h>
+				int main()
+				{
+				int t1 = 0, t2 = 1, nextTerm = 0, n;
+
+				printf("Enter a positive number: ");
+				scanf("%d", &n);
+
+				// displays the first two terms which is always 0 and 1
+				printf("Fibonacci Series: %d, %d, ", t1, t2);
+
+				nextTerm = t1 + t2;
+
+				while(nextTerm <= n)
+				{
+				printf("%d, ",nextTerm);
+				t1 = t2;
+				t2 = nextTerm;
+				nextTerm = t1 + t2;
+				}
+
+				return 0;
+				}
+				</pre>
+			</div>
+			<div id="Java">
+
+				<div class="A">Java Program</div>
+				<pre class="B">
+				public class Fibonacci {
+
+				public static void main(String[] args) {
+
+				int n = 100, t1 = 0, t2 = 1;
+
+				System.out.print("Upto " + n + ": ");
+				while (t1 <= n)
+				{
+				System.out.print(t1 + " + ");
+
+				int sum = t1 + t2;
+				t1 = t2;
+				t2 = sum;
+				}
+				}
+				}
+				</pre>
+			</div>
+		</div>
+			<div id="Output">
+				<div id="COutput">
+					<div class="A">C Program Output</div>
+				<p class="B">Enter a positive integer: 100
+Fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89,</p> 
+				</div>
+				<div id="JavaOutput">
+					<div class="A">Java Program Output</div>
+				<p class="B">Upto 100: 0 + 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 + 34 + 55 + 89 +</p>
+				</div>
+		    </div>
+       </div>
+
+</div>
+
+</body>
+</html>

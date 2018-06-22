@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	 <link rel="stylesheet" href="Styles/styles.css">
+
+</head>
+<body>
+<div id="Content">
+		<div id="Problem"><div class="A">Problem</div><p class="B">Program to Check Whether a Number is Palindrome or Not</p></div>
+		<div id="Discription"><div class="A">Discription</div><p class="B">This program reverses an integer (entered by the user) using while loop. Then, if statement is used to check whether the reversed number is equal to the original number or not.</p></div>
+		<div id="Program">
+			<div id="C">
+				<div class="A">C Program</div>
+				<pre class="B">
+				#include <stdio.h>
+				int main()
+				{
+				int n, reversedInteger = 0, remainder, originalInteger;
+
+				printf("Enter an integer: ");
+				scanf("%d", &n);
+
+				originalInteger = n;
+
+				// reversed integer is stored in variable 
+				while( n!=0 )
+				{
+				remainder = n%10;
+				reversedInteger = reversedInteger*10 + remainder;
+				n /= 10;
+				}
+
+				// palindrome if orignalInteger and reversedInteger are equal
+				if (originalInteger == reversedInteger)
+				printf("%d is a palindrome.", originalInteger);
+				else
+				printf("%d is not a palindrome.", originalInteger);
+
+				return 0;
+				}
+				</pre>
+			</div>
+			<div id="Java">
+
+				<div class="A">Java Program</div>
+				<pre class="B">public class Palindrome {
+
+				public static void main(String[] args) {
+
+				int num = 121, reversedInteger = 0, remainder, originalInteger;
+
+				originalInteger = num;
+
+				// reversed integer is stored in variable 
+				while( num != 0 )
+				{
+				remainder = num % 10;
+				reversedInteger = reversedInteger * 10 + remainder;
+				num  /= 10;
+				}
+
+				// palindrome if orignalInteger and reversedInteger are equal
+				if (originalInteger == reversedInteger)
+				System.out.println(originalInteger + " is a palindrome.");
+				else
+				System.out.println(originalInteger + " is not a palindrome.");
+				}
+				}
+				</pre>
+			</div>
+		</div>
+			<div id="Output">
+				<div id="COutput">
+					<div class="A">C Program Output</div>
+				<pre class="B">Enter an integer: 1001
+				1001 is a palindrome.</pre>
+				</div>
+				<div id="JavaOutput">
+					<div class="A">Java Program Output</div>
+				<pre class="B">121 is a palindrome number.</pre>
+				</div>
+		    </div>
+       </div>
+
+</div>
+
+</body>
+</html>
